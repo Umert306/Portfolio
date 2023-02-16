@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+* 
+{
+    margin: 0;
+    padding: 0;
+}
+*,
+
+:before,
+:after 
+{
+
+    box-sizing: inherit;
+}
+
+html 
+{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    color: rgb(0, 0, 0);
+}
+
+body
+{
+    font-family: 'Space Grotesk', sans-serif;   
+    min-height: calc(100vh - 8vw);
+    font-weight: 400;
+    line-height: 1.6;
+    height: 100%;
+    font-size: 1.6rem;
+    background-color: #FFF2F2;
+
+}
+
+a 
+{
+    text-decoration: none;
+    color: black;
+}
+
+@media only screen and (max-width: 68.75em) 
+{
+    html 
+    {
+        font-size: 53%;
+    }
+}
+
+.nav 
+{
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    padding: 0px 8rem;
+}
+
+.nav__logo 
+{
+    width: 40%;
+    font-size: 2rem;
+    font-weight: 700;
+    justify-content: flex-start;
+}
+
+.nav__details 
+{
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.nav__details--item 
+{
+    position: relative;
+    margin: 0 4rem;
+    transition: all 1s ease-in-out;
+}
+
+.nav__details--item::after
+{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    top: 35px;
+    left: 0px;
+    background-color: #c3f0ff;
+    transform-origin: bottom left;
+    transition: transform 0.25s ease-in;
+    
+    
+}
+
+.nav__details--item:hover::after
+{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    
+}
+
+.intro {
+    padding-top: 30rem;
+    background: linear-gradient(90deg, #8EA7E9 40%, #FFF2F2 40%);
+    height: 100vh;
+}
+
+.intro__name h3 
+{
+    text-align: center;
+    font-size: 6rem;
+}
+
+.intro__name h1 
+{
+    text-align: center;
+    font-size: 12rem;
+}
+
+.imagecontainer 
+{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 3rem;
+}
+
+.image 
+{
+    width: 90%;
+}
+
+.abouttitle h1 
+{
+    text-align: center;
+    font-size: 6rem;
+}
+
+.about
+{
+    padding-top: 10rem;
+    display:flex;
+    flex-direction: column;
+    padding-bottom: 15rem;
+}
+
+.about__description
+{
+    display: flex;
+    justify-content: space-around;
+    padding: 3rem 40rem;
+
+}
+
+.about__text 
+{
+    font-size: 2.4rem;
+    width: 50%;
+}
+
+.project__description
+{
+    padding-bottom: 10rem;
+}
+
+.projecttext h1
+{
+    display: flex;
+    justify-content: center;
+    font-size: 6rem;
+    padding-top: 15rem;
+    margin-bottom: 4rem;
+    border-top: 3px solid black;
+    width: 75%;
+    margin-left: 23rem;
+}
+
+.card 
+{
+    background-color: #E5E0FF;
+    width: 43rem;
+    height: 50rem;
+    margin: 1rem;
+    border-radius: 10px;
+    border-top: 3px solid black;
+    padding: 2rem;
+    padding:  2rem 2rem;
+    box-shadow:  0px 14px 24px 0px #adb5bdb4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    animation: reversehoveranimation 0.5s ease-in-out;
+}
+
+.card:hover
+{
+    /* background-color:#b8b4cf; */
+    animation: hoveranimation 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hoveranimation
+{
+    0%
+    {
+        background-color: #E5E0FF;
+
+    }
+    100%
+    {
+        background-color:#ccccffS;
+
+    }
+}
+
+@keyframes reversehoveranimation
+{
+    0%
+    {
+        background-color:#ccccff;
+        
+    }
+    100%
+    {
+        background-color: #E5E0FF;
+
+    }
+}
+
+.flexcards 
+{
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+    padding-bottom: 8rem;
+}
+
+.card__text 
+{
+    text-align: center;
+    font-size: 4rem;
+    height: 40%;
+}
+
+.arrow 
+{
+    height: 5rem;
+    display: flex;
+    justify-content: end;
+}
+
+.arrow img 
+{
+    height: 100%;
+}
+
+.project__description 
+{
+    text-align: center;
+    font-size: 2rem;
+    height: 50%;
+    align-items: flex-start;
+    display: flex;
+}
+
+.contacttext
+{
+    display: flex;
+    justify-content: center;
+    font-size: 6rem;
+    padding-top: 15rem;
+    margin-bottom: 4rem;
+    margin-top: 14rem;
+    border-top: 3px solid black;
+    width: 75%;
+    margin-left: 23rem;
+}
+
+.contactcard {
+    background-color: #7286D3;
+    width: 102rem;
+    height: 43rem;
+    margin: 1rem;
+    border-radius: 10px;
+    border-top: 3px solid black;
+    padding: 2rem;
+    padding: 2rem 2rem;
+    box-shadow: 0px 14px 24px 0px #adb5bdb4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.contacticons 
+{
+    display: flex;
+    justify-content: center;
+}
+
+.logo img
+{
+    font-size: 10rem;
+    height: 31rem;
+    padding: 7rem;
+}
+
+.contactcentre
+{   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16rem;
+
+}
+
+.nav
+{
+    display: flex;
+    align-items: center;
+    position: fixed;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
